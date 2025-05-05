@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhores Ofertas Agora - Encontre os melhores descontos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/script/script.js"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-tags text-green-500 text-2xl"></i>
+                <h1 class="text-xl font-bold text-gray-800">Melhores Ofertas Agora</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-green-600 font-medium hover:text-green-800 transition">Início</a>
+                <a href="#categories" class="text-gray-600 hover:text-green-600 transition">Categorias</a>
+                <a href="#popular" class="text-gray-600 hover:text-green-600 transition">Ofertas</a>
+                <a href="#about" class="text-gray-600 hover:text-green-600 transition">Sobre</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-600 transition">Contato</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button id="auth-btn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md transition">
+                    Entrar
+                </button>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <i class="fas fa-bars text-gray-600 text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <a href="#" class="py-2 text-green-600 font-medium">Início</a>
+                <a href="#categories" class="py-2 text-gray-600">Categorias</a>
+                <a href="#popular" class="py-2 text-gray-600">Ofertas</a>
+                <a href="#about" class="py-2 text-gray-600">Sobre</a>
+                <a href="#contact" class="py-2 text-gray-600">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="animated-bg text-white py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Encontre as melhores ofertas do mercado</h1>
+                <p class="text-xl mb-6">Economize até 70% em produtos das melhores lojas online.</p>
+                
+                <!-- Search Bar -->
+                <div class="relative max-w-xl">
+                    <input type="text" placeholder="O que você está procurando?" 
+                           class="w-full py-4 px-6 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <button class="absolute right-2 top-2 bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-full transition">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+                
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="text-sm">Sugestões:</span>
+                    <a href="#" class="text-sm bg-white bg-opacity-20 hover:bg-opacity-30 px-3 py-1 rounded-full transition">Smartphone</a>
+                    <a href="#" class="text-sm bg-white bg-opacity-20 hover:bg-opacity-30 px-3 py-1 rounded-full transition">Notebook</a>
+                    <a href="#" class="text-sm bg-white bg-opacity-20 hover:bg-opacity-30 px-3 py-1 rounded-full transition">TV</a>
+                    <a href="#" class="text-sm bg-white bg-opacity-20 hover:bg-opacity-30 px-3 py-1 rounded-full transition">Fones</a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative floating">
+                    <img src="https://via.placeholder.com/400x300" alt="Ofertas" class="rounded-xl shadow-2xl border-8 border-white">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
+                        <div class="text-green-600 font-bold text-xl">-50% OFF</div>
+                        <div class="text-gray-600 text-sm">Aproveite essa promoção!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Banner -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-500">Espaço para anúncio</p>
+            <div class="h-16 bg-gray-200 rounded-md flex items-center justify-center mt-2">
+                <p class="text-gray-500">Anúncio Patrocinado</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <section id="categories" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Navegue por Categorias</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Category 1 -->
+                <a href="#" class="bg-gray-50 hover:bg-green-50 border border-gray-200 rounded-lg p-4 text-center transition group">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-3 group-hover:bg-green-200 transition">
+                        <i class="fas fa-laptop text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Eletrônicos</h3>
+                    <p class="text-sm text-gray-500 mt-1">1,234 ofertas</p>
+                </a>
+                
+                <!-- Category 2 -->
+                <a href="#" class="bg-gray-50 hover:bg-green-50 border border-gray-200 rounded-lg p-4 text-center transition group">
+                    <div class="bg-orange-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-3 group-hover:bg-orange-200 transition">
+                        <i class="fas fa-tshirt text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Moda</h3>
+                    <p class="text-sm text-gray-500 mt-1">876 ofertas</p>
+                </a>
+                
+                <!-- Category 3 -->
+                <a href="#" class="bg-gray-50 hover:bg-green-50 border border-gray-200 rounded-lg p-4 text-center transition group">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-3 group-hover:bg-blue-200 transition">
+                        <i class="fas fa-home text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Casa</h3>
+                    <p class="text-sm text-gray-500 mt-1">543 ofertas</p>
+                </a>
+                
+                <!-- Category 4 -->
+                <a href="#" class="bg-gray-50 hover:bg-green-50 border border-gray-200 rounded-lg p-4 text-center transition group">
+                    <div class="bg-yellow-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-3 group-hover:bg-yellow-200 transition">
+                        <i class="fas fa-utensils text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Supermercado</h3>
+                    <p class="text-sm text-gray-500 mt-1">1,987 ofertas</p>
+                </a>
+                
+                <!-- Category 5 -->
+                <a href="#" class="bg-gray-50 hover:bg-green-50 border border-gray-200 rounded-lg p-4 text-center transition group">
+                    <div class="bg-purple-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-3 group-hover:bg-purple-200 transition">
+                        <i class="fas fa-gamepad text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Games</h3>
+                    <p class="text-sm text-gray-500 mt-1">321 ofertas</p>
+                </a>
+                
+                <!-- Category 6 -->
+                <a href="#" class="bg-gray-50 hover:bg-green-50 border border-gray-200 rounded-lg p-4 text-center transition group">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-3 group-hover:bg-red-200 transition">
+                        <i class="fas fa-heartbeat text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">Saúde</h3>
+                    <p class="text-sm text-gray-500 mt-1">654 ofertas</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Offers -->
+    <section id="popular" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Ofertas Populares</h2>
+                <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                    Ver todas <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition relative">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/300x200" alt="Produto" class="w-full h-48 object-cover">
+                        <div class="discount-badge">-30%</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg">Smartphone XYZ Pro</h3>
+                                <p class="text-gray-500 text-sm">Loja A</p>
+                            </div>
+                            <button class="text-gray-400 hover:text-red-500 transition">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <div class="flex items-center">
+                                <span class="text-green-600 font-bold text-xl">R$ 1.799</span>
+                                <span class="price-slash ml-2">R$ 2.599</span>
+                            </div>
+                            <div class="text-green-500 text-sm mt-1">Economize R$ 800</div>
+                        </div>
+                        
+                        <div class="mt-4 flex justify-between items-center">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-500 text-sm ml-1">(128)</span>
+                            </div>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition relative">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/300x200" alt="Produto" class="w-full h-48 object-cover">
+                        <div class="discount-badge">-45%</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg">Notebook Ultrafino</h3>
+                                <p class="text-gray-500 text-sm">Loja B</p>
+                            </div>
+                            <button class="text-gray-400 hover:text-red-500 transition">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <div class="flex items-center">
+                                <span class="text-green-600 font-bold text-xl">R$ 2.999</span>
+                                <span class="price-slash ml-2">R$ 5.499</span>
+                            </div>
+                            <div class="text-green-500 text-sm mt-1">Economize R$ 2.500</div>
+                        </div>
+                        
+                        <div class="mt-4 flex justify-between items-center">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-gray-500 text-sm ml-1">(89)</span>
+                            </div>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition relative">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/300x200" alt="Produto" class="w-full h-48 object-cover">
+                        <div class="discount-badge pulse">-60%</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg">Fone Bluetooth</h3>
+                                <p class="text-gray-500 text-sm">Loja C</p>
+                            </div>
+                            <button class="text-gray-400 hover:text-red-500 transition">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <div class="flex items-center">
+                                <span class="text-green-600 font-bold text-xl">R$ 199</span>
+                                <span class="price-slash ml-2">R$ 499</span>
+                            </div>
+                            <div class="text-green-500 text-sm mt-1">Economize R$ 300</div>
+                        </div>
+                        
+                        <div class="mt-4 flex justify-between items-center">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-500 text-sm ml-1">(256)</span>
+                            </div>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition relative">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/300x200" alt="Produto" class="w-full h-48 object-cover">
+                        <div class="discount-badge">-25%</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-lg">Smart TV 4K</h3>
+                                <p class="text-gray-500 text-sm">Loja D</p>
+                            </div>
+                            <button class="text-gray-400 hover:text-red-500 transition">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <div class="flex items-center">
+                                <span class="text-green-600 font-bold text-xl">R$ 2.299</span>
+                                <span class="price-slash ml-2">R$ 3.099</span>
+                            </div>
+                            <div class="text-green-500 text-sm mt-1">Economize R$ 800</div>
+                        </div>
+                        
+                        <div class="mt-4 flex justify-between items-center">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-500 text-sm ml-1">(178)</span>
+                            </div>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Subscription -->
+    <section class="py-12 bg-gradient-to-r from-green-500 to-green-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Seja Premium e economize mais!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Receba alertas exclusivos das melhores ofertas antes de todo mundo e tenha acesso a cupons de desconto especiais.</p>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 text-gray-800">
+                        <h3 class="text-2xl font-bold mb-4">Assinatura Premium</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Alertas exclusivos de ofertas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Cupons de desconto adicionais</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Monitoramento de produtos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Suporte prioritário</span>
+                            </li>
+                        </ul>
+                        <div class="text-sm text-gray-500">* Cancele quando quiser</div>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-green-700 p-8 flex flex-col justify-center">
+                        <div class="mb-6">
+                            <div class="text-4xl font-bold">R$ 9,90<span class="text-lg">/mês</span></div>
+                            <div class="text-green-200">ou R$ 99,90/ano (economize 16%)</div>
+                        </div>
+                        
+                        <button class="bg-white text-green-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-full transition">
+                            Assinar Agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://via.placeholder.com/500x350" alt="Sobre Nós" class="rounded-xl shadow-lg">
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">Sobre Nós</h2>
+                    <p class="text-gray-600 mb-4">
+                        O <span class="font-bold text-green-600">Melhores Ofertas Agora</span> nasceu da necessidade de ajudar os consumidores a encontrar os melhores preços em produtos de diversas categorias.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Nossa equipe trabalha constantemente para rastrear e analisar milhares de produtos em dezenas de lojas parceiras, garantindo que você sempre tenha acesso às melhores ofertas do mercado.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Utilizamos tecnologia avançada para monitorar preços em tempo real e notificamos nossos usuários quando um produto atinge o menor preço histórico.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="text-green-600 font-bold text-2xl">+500</div>
+                            <div class="text-gray-600">Lojas parceiras</div>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="text-green-600 font-bold text-2xl">1M+</div>
+                            <div class="text-gray-600">Ofertas analisadas</div>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="text-green-600 font-bold text-2xl">50K+</div>
+                            <div class="text-gray-600">Usuários satisfeitos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">O que dizem nossos usuários</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/50" alt="Usuário" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Carlos Silva</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Comprei um notebook com 40% de desconto graças ao alerta que recebi. Economizei mais de R$ 2.000! Vale muito a pena assinar o serviço premium."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/50" alt="Usuário" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Ana Oliveira</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Adoro o site! Sempre encontro ótimas promoções de supermercado. Já economizei centenas de reais em compras do mês."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/50" alt="Usuário" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Roberto Santos</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "O monitoramento de preços é incrível. Coloquei um produto na lista de desejos e recebi um alerta quando caiu para o menor preço histórico. Recomendo!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8">Entre em Contato</h2>
+                
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 bg-green-600 text-white p-8">
+                            <h3 class="text-2xl font-bold mb-4">Informações de Contato</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-bold">Endereço</h4>
+                                        <p>Av. das Ofertas, 1234 - Centro, São Paulo/SP</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <i class="fas fa-envelope mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-bold">Email</h4>
+                                        <p>contato@melhoresofertasagora.com.br</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <i class="fas fa-phone-alt mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-bold">Telefone</h4>
+                                        <p>(11) 1234-5678</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-bold mb-4">Siga-nos</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="bg-white bg-opacity-20 hover:bg-opacity-30 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-1/2 p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-800">Envie uma mensagem</h3>
+                            
+                            <form id="contact-form">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-700 mb-2">Nome</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="subject" class="block text-gray-700 mb-2">Assunto</label>
+                                    <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                                    <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-md transition">
+                                    Enviar Mensagem
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Receba as melhores ofertas no seu email</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Assine nossa newsletter e fique por dentro das promoções exclusivas.</p>
+            
+            <div class="max-w-xl mx-auto">
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Seu melhor email" 
+                           class="flex-grow px-4 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <button class="bg-green-600 hover:bg-green-700 font-bold px-6 py-3 rounded-md transition whitespace-nowrap">
+                        Assinar Newsletter
+                    </button>
+                </form>
+                
+                <div class="mt-4 text-sm text-gray-400">
+                    Não se preocupe, não enviamos spam. Você pode cancelar a qualquer momento.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-tags text-green-500 text-2xl"></i>
+                        <h3 class="text-xl font-bold">Melhores Ofertas Agora</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Encontre os melhores descontos e economize em suas compras.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Início</a></li>
+                        <li><a href="#categories" class="text-gray-400 hover:text-white transition">Categorias</a></li>
+                        <li><a href="#popular" class="text-gray-400 hover:text-white transition">Ofertas</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Categorias</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Eletrônicos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Moda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Casa</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Supermercado</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Games</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-gray-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-lg font-bold mb-2">Baixe nosso app</h4>
+                        <div class="flex flex-col space-y-2">
+                            <a href="#" class="bg-black hover:bg-gray-800 px-4 py-2 rounded-md flex items-center transition">
+                                <i class="fab fa-google-play mr-2"></i>
+                                <span class="text-xs">
+                                    <span class="block">Disponível no</span>
+                                    <span class="font-bold">Google Play</span>
+                                </span>
+                            </a>
+                            <a href="#" class="bg-black hover:bg-gray-800 px-4 py-2 rounded-md flex items-center transition">
+                                <i class="fab fa-apple mr-2"></i>
+                                <span class="text-xs">
+                                    <span class="block">Baixe na</span>
+                                    <span class="font-bold">App Store</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2023 Melhores Ofertas Agora. Todos os direitos reservados.
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Termos de Uso</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Política de Privacidade</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <h2 class="text-2xl font-bold">Detalhes do Produto</h2>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="md:flex gap-8">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <div class="relative">
+                            <img src="https://via.placeholder.com/500" alt="Produto" class="w-full rounded-lg">
+                            <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                -30% OFF
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 grid grid-cols-4 gap-2">
+                            <img src="https://via.placeholder.com/100" alt="Miniatura" class="rounded cursor-pointer border-2 border-gray-200 hover:border-green-500">
+                            <img src="https://via.placeholder.com/100" alt="Miniatura" class="rounded cursor-pointer border-2 border-gray-200 hover:border-green-500">
+                            <img src="https://via.placeholder.com/100" alt="Miniatura" class="rounded cursor-pointer border-2 border-gray-200 hover:border-green-500">
+                            <img src="https://via.placeholder.com/100" alt="Miniatura" class="rounded cursor-pointer border-2 border-gray-200 hover:border-green-500">
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <h3 class="text-xl font-bold mb-2" id="modal-product-name">Smartphone XYZ Pro</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm">(128 avaliações)</span>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-center">
+                                <span class="text-green-600 font-bold text-2xl">R$ 1.799</span>
+                                <span class="price-slash ml-2">R$ 2.599</span>
+                            </div>
+                            <div class="text-green-500 text-sm mt-1">Economize R$ 800</div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">Disponível em:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="#" class="bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full text-sm flex items-center transition">
+                                    <img src="https://via.placeholder.com/20" alt="Loja" class="w-4 h-4 mr-2">
+                                    Loja A
+                                </a>
+                                <a href="#" class="bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full text-sm flex items-center transition">
+                                    <img src="https://via.placeholder.com/20" alt="Loja" class="w-4 h-4 mr-2">
+                                    Loja B
+                                </a>
+                                <a href="#" class="bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full text-sm flex items-center transition">
+                                    <img src="https://via.placeholder.com/20" alt="Loja" class="w-4 h-4 mr-2">
+                                    Loja C
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">Descrição:</h4>
+                            <p class="text-gray-600">
+                                Smartphone XYZ Pro com tela de 6.5" AMOLED, processador Snapdragon 888, 8GB RAM, 256GB armazenamento, câmera tripla de 64MP + 12MP + 5MP, bateria de 5000mAh e carregamento rápido de 65W.
+                            </p>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md flex-1 transition flex items-center justify-center">
+                                <i class="fas fa-shopping-cart mr-2"></i> Comprar Agora
+                            </button>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-md transition">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-md transition">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="mt-6 pt-6 border-t border-gray-200">
+                            <h4 class="font-bold mb-2">Compartilhar:</h4>
+                            <div class="flex space-x-3">
+                                <a href="#" class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-pink-600 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-md w-full">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <h2 class="text-2xl font-bold">Entrar / Cadastrar</h2>
+                    <button id="close-auth-modal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <div class="mb-6">
+                    <ul class="flex border-b" id="auth-tabs">
+                        <li class="-mb-px mr-1">
+                            <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" id="login-tab">Entrar</a>
+                        </li>
+                        <li class="mr-1">
+                            <a class="bg-white inline-block py-2 px-4 text-gray-500 hover:text-gray-800 font-semibold" id="register-tab">Cadastrar</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <form id="login-form">
+                    <div class="mb-4">
+                        <label for="login-email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="login-email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="login-password" class="block text-gray-700 mb-2">Senha</label>
+                        <input type="password" id="login-password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-md transition mb-4">
+                        Entrar
+                    </button>
+                    
+                    <div class="text-center">
+                        <a href="#" class="text-green-600 hover:text-green-800 text-sm">Esqueceu sua senha?</a>
+                    </div>
+                </form>
+                
+                <form id="register-form" class="hidden">
+                    <div class="mb-4">
+                        <label for="register-name" class="block text-gray-700 mb-2">Nome</label>
+                        <input type="text" id="register-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="register-email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="register-email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="register-password" class="block text-gray-700 mb-2">Senha</label>
+                        <input type="password" id="register-password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-md transition">
+                        Cadastrar
+                    </button>
+                </form>
+                
+                <div class="mt-6 pt-6 border-t border-gray-200 text-center">
+                    <p class="text-gray-600 mb-4">Ou entre com</p>
+                    <div class="flex justify-center space-x-4">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button class="bg-red-500 hover:bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="bg-black hover:bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-apple"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>
