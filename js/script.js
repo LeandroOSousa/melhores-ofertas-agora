@@ -62,7 +62,7 @@
             registerForm.classList.remove('hidden');
             loginForm.classList.add('hidden');
         });
-
+        
         // Form submissions
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -83,27 +83,4 @@
             alert('Cadastro realizado com sucesso! Faça login para continuar.');
             loginTab.click();
             this.reset();
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
         });
